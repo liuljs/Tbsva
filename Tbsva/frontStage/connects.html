@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>將移至繳款網址···</title>
+</head>
+
+<body>
+    <!-- SendForm -->
+    <!-- 正式區：https://service.payware.com.tw/wpss/authpay.aspx -->
+    <form class="sendOrderForm" hidden action="https://test.payware.com.tw/wpss/authpay.aspx" method="POST">
+        <input type="hidden" name="MerchantId">
+        <input type="hidden" name="TerminalId">
+        <input type="hidden" name="MerchantName">
+        <input type="hidden" name="RequestUrl">
+        <input type="hidden" name="ReturnURL">
+        <input type="hidden" name="CardHolder">
+        <input type="hidden" name="PayType">
+        <input type="hidden" name="OrderNo">
+        <input type="hidden" name="Amount">
+        <input type="hidden" name="Product">
+        <input type="hidden" name="OrderDesc">
+        <input type="hidden" name="Encoding">
+        <input type="hidden" name="Mobile">
+        <input type="hidden" name="TelNumber">
+        <input type="hidden" name="Address">
+        <input type="hidden" name="Email">
+        <input type="hidden" name="memberId">
+        <input type="hidden" name="GoBackURL">
+        <input type="hidden" name="ReceiveURL">
+        <input type="hidden" name="DeadlineDate">
+        <input type="hidden" name="RequiredConfirm">
+        <input type="hidden" name="deferred">
+        <input type="hidden" name="Carrier">
+        <input type="hidden" name="InvoiceName">
+        <input type="hidden" name="validateKey">
+    </form>
+    <!-- <Roturlstatus>OK</Roturlstatus> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
+<script src="./js/selfs/common.js"></script>
+    <script src="./js/features/connects.js"></script>
+</body>
+
+</html>

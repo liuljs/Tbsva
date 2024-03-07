@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WebShopping.Models
+{
+    public enum OpenStatus
+    {
+        Close,
+        Open
+    }
+
+    public enum MessageStatus
+    {
+        None  ,
+        RepeatAccount ,     //已經有相同的帳號
+        RepeatPhone  ,      //已經有相同的手機號碼
+    }
+}

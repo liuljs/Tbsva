@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真佛宗密教總會 | 後台管理</title>
+    <link rel="icon" type="image/x-icon" href="./img/elements/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css">
+<!-- <link rel="stylesheet" href="./css/bootstrap_v4.4.1.min.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/Kits/atlantis.min.css">
+<link rel="stylesheet" href="./css/page.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="loadingScreens loadingScreenz">
+    <div class="loadings">
+        <div class="loading"></div>
+        <div class="texts">
+            <p>NOW LOADING ···</p>
+        </div>
+    </div>
+</div>
+        <div class="main-header">
+    <!-- Logo Header -->
+    <div class="logo-header" data-background-color="">
+        <a class="logo" href="./">
+            <div class="images">
+                <img src="./img/elements/logo.png" class="navbar-brand">
+            </div>
+        </a>
+        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fal fa-bars"></i>
+            </span>
+        </button>
+        <button class="topbar-toggler more"><i class="far fa-ellipsis-v"></i></button>
+        <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+                <i class="fal fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="">
+        <div class="container-fluid">
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                <li class="nav-item dropdown hidden-caret mr-2 nav-item-hover">
+                    <p class="dropdown-toggle mb-0" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-alt"></i>
+                        <span class="get_admin"></span>
+                    </p>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <p class="dropdown-item mb-0 dropdown-non">設定</p>
+                        <div class="dropdown-divider"></div>
+                        <p class="dropdown-item mb-0 btnOpenz" data-toggle="modal" data-target="#passWordEdit">修改密碼</p>
+                    </div>
+                </li>
+                <li class="nav-item hidden-caret nav-item-hover">
+                    <p class="mb-0 btnLogoutz"><i class="far fa-sign-out"></i> 登出</p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="sidebar sidebar-style-2">
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content menus">
+            <ul class="nav nav-primary">
+                <ul data-numz="editCategory" class="nav nav-primary categories editCategoryz"></ul>
+                <ul data-numz="financialCategory" class="nav nav-primary categories financialCategoryz"></ul>
+                <ul data-numz="managerCategory" class="nav nav-primary categories managerCategoryz"></ul>
+            </ul>
+        </div>
+    </div>
+</div>
+        <div class="main-panel">
+            <div data-type="02" data-category="financialCategory" data-numz="f03" class="aiders"></div>
+            <div class="content">
+                <div class="page-inner">
+                    <div class="page-header">
+                        <h4 class="page-title">善款紀錄</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-12 form-group py-0">
+                                            <h2 class="text-primary d-inline mb-0">紀錄列表</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group col-12">
+                                            <div class="searchs">
+                                                <div class="parts">
+                                                    <label class="col-auto pl-0" for="inputGroupSelect01">捐款方式</label>
+                                                    <div class="selects">
+                                                        <select class="form-control custom-select classifyz" id="inputGroupSelect01">
+                                                            <option value="preset">選擇方式 - </option>
+                                                            <option value="1">一般捐款</option>
+                                                            <option value="2">結緣捐贈</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="parts">
+                                                    <div class="inputs search">
+                                                        <input class="form-control searchz" type="text" placeholder="請輸入捐款姓名">
+                                                    </div>
+                                                    <div class="btns">
+                                                        <button type="button" class="btn btn-bGreen btnSearchz">查詢</button>
+                                                        <button type="button" class="btn btn-primary btnAllz">全部記錄</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <div class="table-wrap rowList mb-2">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="fieldShorts text-center">訂單編號</td>
+                                                            <td class="fieldMediums">捐款日期</td>
+                                                            <td>捐款姓名</td>
+                                                            <td class="fieldMediums text-center">捐款方式</td>
+                                                            <td class="fieldStatus text-center">顯示狀態</td>
+                                                            <td class="fieldStatus text-center">繳款狀態</td>
+                                                            <td class="fieldStatus text-center">交易狀態</td>
+                                                            <td class="fieldShorts text-center">設定</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="list"></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="form-group col-12">
+                                            <div class="paginations">
+                                                <ul class="pagination justify-content-end mb-0">
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" data-num="prev">上一頁</a>
+                                                    </li>
+                                                    <div class="d-flex pagez"></div>
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" data-num="next">下一頁</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            © 中國真佛宗密教總會 All Rights Reserved.
+        </nav>
+        <div class="copyright ml-auto">
+            2021, made with by <a href="https://www.payware.com.tw/">派維爾金流支付</a>
+        </div>
+    </div>
+</footer>
+        </div>
+    </div>
+    <!-- Modal 2 詳情 -->
+    <div id="recordDetails" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content edits">
+                <div class="modal-header">
+                    <h3 class="modal-title d-flex align-items-center">
+                        <span>捐款紀錄</span>
+                        <span class="name-set text-primary numz"> </span>
+                    </h3>
+                    <button type="button" class="close"><span>&times;</span></button>
+                    <input type="hidden" class="closez" data-dismiss="modal" aria-label="Close" aria-hidden="true">
+                </div>
+                <div class="modal-body">
+                    <fieldset class="fieldsets">
+                        <legend class="legends">基本資訊</legend>
+                        <table class="table table-bordered infos">
+                            <tbody>
+                                <tr>
+                                    <th>捐款姓名</th>
+                                    <td class="namez"></td>
+                                </tr>
+                                <tr>
+                                    <th>隸屬地區</th>
+                                    <td class="areaz"></td>
+                                </tr>
+                                <tr>
+                                    <th>聯絡地址</th>
+                                    <td class="concatAddrz"></td>
+                                </tr>
+                                <tr>
+                                    <th>聯絡電話</th>
+                                    <td class="phonez"></td>
+                                </tr>
+                                <tr>
+                                    <th>手機號碼</th>
+                                    <td class="cellz"></td>
+                                </tr>
+                                <tr>
+                                    <th>電子信箱</th>
+                                    <td class="mailz"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <fieldset class="fieldsets">
+                        <legend class="legends">捐贈項目</legend>
+                        <div class="table records">
+                            <div class="lists recordz">
+                                <div class="items">
+                                    <div class="parts">
+                                        <div class="heads">
+                                            <p class="mainTitle"></p>
+                                        </div>
+                                    </div>
+                                    <div class="parts">
+                                        <div class="qties">
+                                            <div class="names">
+                                                <p class="mainTitle">數量</p>
+                                            </div>
+                                            <p class="qty"></p>
+                                        </div>
+                                    </div>
+                                    <div class="parts">
+                                        <div class="subTotals">
+                                            <div class="names">
+                                                <p class="mainTitle">小計</p>
+                                            </div>
+                                            <p class="subTotal">
+                                                <span></span>
+                                                <span>元</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="noteContents">
+                                <div class="parts">
+                                    <div class="heads">
+                                        <p class="mainTitle">備註說明</p>
+                                    </div>
+                                </div>
+                                <div class="parts">
+                                    <div class="texts">
+                                        <p class="text notez"> - </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldsets">
+                        <legend class="legends">捐贈方式</legend>
+                        <table class="table table-bordered donates">
+                            <tbody>
+                                <tr>
+                                    <th>付款方式</th>
+                                    <td class="payMethodz"></td>
+                                </tr>
+                                <tr>
+                                    <th>付款期限</th>
+                                    <td class="payEndDatez"></td>
+                                </tr>
+                                <tr>
+                                    <th>開立收據</th>
+                                    <td class="receiptz"></td>
+                                </tr>
+                                <tr>
+                                    <th>收據抬頭</th>
+                                    <td class="receiptTitlez"></td>
+                                </tr>
+                                <tr>
+                                    <th>寄件地址<span class="notes omit">（收據、結緣品）</span></th>
+                                    <td class="sendAddrz"></td>
+                                </tr>
+                                <tr>
+                                    <th>捐款總金額</th>
+                                    <td>
+                                        <div class="units">
+                                            <span class="amountz"></span>
+                                            <span>元</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>是否同意公開資訊</th>
+                                    <td class="agreez"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 忘記密碼 -->
+    <!-- Modal -->
+<div class="modal fade" id="passWordEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">修改密碼<span class="notes">（＊號為必填欄位）</span></h3>
+                <button type="button" class="close"><span>&times;</span></button>
+                <input type="hidden" class="closez" data-dismiss="modal" aria-label="Close" aria-hidden="true">
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>舊密碼<span class="markz">（包含大小寫英數字，至少要4碼）</span></label>
+                    <input type="password" class="editInput form-control oldPswz">
+                </div>
+                <div class="form-group">
+                    <label>新密碼<span class="markz">（包含大小寫英數字，至少要4碼）</span></label>
+                    <input type="password" class="editInput form-control newPswz">
+                </div>
+                <div class="form-group">
+                    <label>確認新密碼<span class="markz">（包含大小寫英數字，至少要4碼）</span></label>
+                    <input type="password" class="editInput form-control cfmPswz">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btns justify-content-end">
+                    <button type="button" class="btn btnFirst btnChangePswz">修改</button>
+                    <button type="button" class="btn btnCancel btnCancelz">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- <script src="./js/jquery.3.2.1.min.js"></script> -->
+    <!-- <script src="./js/popper.min.js"></script> -->
+    <!-- <script src="./js/bootstrap_v4.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./js/Kits/bootstrap-fileinput.js"></script>
+    <script src="./js/Kits/jquery-ui.min.js"></script>
+    <script src="./js/Kits/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="./js/Kits/jquery.scrollbar.min.js"></script>
+    <script src="./js/Kits/atlantis.min.js"></script>
+
+    <script src="./js/selfs/dateFormat.js"></script>
+    <script src="./js/selfs/commons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
+    <script>
+        // 台灣地址 下拉式選單
+        $(".twZipCodes").twzipcode({
+            zipcodeIntoDistrict: true, // 郵遞區號自動顯示在地區
+            css: ["custom-select form-control counties", "custom-select form-control districts"], // 自訂 "城市"、"地區" class 名稱 
+            countyName: "city", // 自訂城市 select 標籤的 name 值
+            districtName: "town" // 自訂地區 select 標籤的 name 值
+        });
+    </script>
+
+    <script src="./js/selfs/menu.js"></script>
+    <script src="./js/features/donateRecord.js"></script>
+</body>
+
+</html>

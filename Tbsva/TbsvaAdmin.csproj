@@ -1,0 +1,571 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7268ED29-7591-41D7-9178-99BC847B7B66}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tbsva</RootNamespace>
+    <AssemblyName>Tbsva</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperExtensions, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperExtensions.1.6.3\lib\net45\DapperExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ecSqlDBManager">
+      <HintPath>..\..\..\..\..\Tools\PublicTools_4.5.2\ecSqlDBManager\bin\Debug\ecSqlDBManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Unity.Abstractions, Version=5.11.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.5.11.6\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AspNet.WebApi, Version=5.11.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.AspNet.WebApi.5.11.2\lib\net47\Unity.AspNet.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.8.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.11.8\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Google_Login.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityWebApiActivator.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\CustomAuthorize.cs" />
+    <Compile Include="Connection\ConnectionFactory.cs" />
+    <Compile Include="Controllers\ActivityCategoryController.cs" />
+    <Compile Include="Controllers\AuthAdminV2Controller.cs" />
+    <Compile Include="Controllers\LotusController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\AddTbsvaController.cs" />
+    <Compile Include="Controllers\ConvertFormsController.cs" />
+    <Compile Include="Controllers\DirectorIntroductionController.cs" />
+    <Compile Include="Controllers\IndexSlideshowController.cs" />
+    <Compile Include="Controllers\Knowledge2Controller.cs" />
+    <Compile Include="Controllers\TextEditorR10Controller.cs" />
+    <Compile Include="Controllers\GraphicsEditorRXController.cs" />
+    <Compile Include="Controllers\TextEditorR9Controller.cs" />
+    <Compile Include="Controllers\TextEditorR8Controller.cs" />
+    <Compile Include="Controllers\TextEditorR7Controller.cs" />
+    <Compile Include="Controllers\TextEditorR6Controller.cs" />
+    <Compile Include="Controllers\TextEditorR5Controller.cs" />
+    <Compile Include="Controllers\TextEditorR4Controller.cs" />
+    <Compile Include="Controllers\TextEditorR3Controller.cs" />
+    <Compile Include="Controllers\TextEditorR2Controller.cs" />
+    <Compile Include="Controllers\TextEditorR1Controller.cs" />
+    <Compile Include="Controllers\TaiwanDojoCategoryController.cs" />
+    <Compile Include="Controllers\TaiwanDojoController.cs" />
+    <Compile Include="Controllers\TimeMachineController.cs" />
+    <Compile Include="Controllers\Video2Controller.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\DonateRelatedItemController.cs" />
+    <Compile Include="Controllers\ArticleCategoryController.cs" />
+    <Compile Include="Controllers\ArticleContentController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\DonateController.cs" />
+    <Compile Include="Controllers\KnowledgeController.cs" />
+    <Compile Include="Controllers\LightingCategoryController.cs" />
+    <Compile Include="Controllers\LightingContentController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\Other1Controller.cs" />
+    <Compile Include="Controllers\OtherAccessoriesController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\PaymentDonateController.cs" />
+    <Compile Include="Controllers\PaymentMailingController.cs" />
+    <Compile Include="Controllers\PictureListController.cs" />
+    <Compile Include="Controllers\QAController.cs" />
+    <Compile Include="Controllers\TermsController.cs" />
+    <Compile Include="Controllers\PrivacyController.cs" />
+    <Compile Include="Controllers\AboutMeController.cs" />
+    <Compile Include="Controllers\AuthUserController.cs" />
+    <Compile Include="Controllers\AuthAdminController.cs" />
+    <Compile Include="Controllers\CategoryAdminController.cs" />
+    <Compile Include="Controllers\ContactUsController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\ManagerGroupController.cs" />
+    <Compile Include="Controllers\MemberUserController.cs" />
+    <Compile Include="Controllers\MemberAdminController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="Controllers\FaqController.cs" />
+    <Compile Include="Controllers\OrdersAdminController.cs" />
+    <Compile Include="Controllers\LoggerController.cs" />
+    <Compile Include="Controllers\SpecAdminController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductAdminController.cs" />
+    <Compile Include="Controllers\VideoCategoryController.cs" />
+    <Compile Include="Controllers\VideoContentController.cs" />
+    <Compile Include="Dtos\ActivityCategoryDto.cs" />
+    <Compile Include="Dtos\ClassificationModuleV2Dto.cs" />
+    <Compile Include="Dtos\LotusDto.cs" />
+    <Compile Include="Dtos\LotusImageDto.cs" />
+    <Compile Include="Dtos\ModuleV2Dto.cs" />
+    <Compile Include="Dtos\NewsImageDto.cs" />
+    <Compile Include="Dtos\NewsDto.cs" />
+    <Compile Include="Dtos\AddTbsvaDto.cs" />
+    <Compile Include="Dtos\ConvertFormsDto.cs" />
+    <Compile Include="Dtos\DirectorIntroductionDto.cs" />
+    <Compile Include="Dtos\ArticleImageDto.cs" />
+    <Compile Include="Dtos\DirectorIntroductionImageDto.cs" />
+    <Compile Include="Dtos\DonatePayTypeDto.cs" />
+    <Compile Include="Dtos\DonateRelatedItemDto.cs" />
+    <Compile Include="Dtos\IndexSlideshowDto.cs" />
+    <Compile Include="Dtos\KnowledgeContent2Dto.cs" />
+    <Compile Include="Dtos\GraphicsEditorDto.cs" />
+    <Compile Include="Dtos\GraphicsEditorImageDto.cs" />
+    <Compile Include="Dtos\TextEditorDto.cs" />
+    <Compile Include="Dtos\TaiwanDojoCategoryDto.cs" />
+    <Compile Include="Dtos\TaiwanDojoDto.cs" />
+    <Compile Include="Dtos\KnowledgeImageDto.cs" />
+    <Compile Include="Dtos\TaiwanDojoImageDto.cs" />
+    <Compile Include="Dtos\TimeMachineDto.cs" />
+    <Compile Include="Dtos\UserIdentityCookieDto.cs" />
+    <Compile Include="Dtos\UserIdentityDto.cs" />
+    <Compile Include="Dtos\Video2Dto.cs" />
+    <Compile Include="Dtos\DonateRelatedItemImageDto.cs" />
+    <Compile Include="Dtos\VideoImage2Dto.cs" />
+    <Compile Include="Dtos\VideoImageDto.cs" />
+    <Compile Include="Dtos\VideoDto.cs" />
+    <Compile Include="Dtos\ActivityDto.cs" />
+    <Compile Include="Dtos\ActivityImageDto.cs" />
+    <Compile Include="Dtos\apiNewResultError.cs" />
+    <Compile Include="Dtos\apiNewResultSuccess.cs" />
+    <Compile Include="Dtos\ArticleCategoryDto.cs" />
+    <Compile Include="Dtos\ArticleContentDto.cs" />
+    <Compile Include="Dtos\DonateDto.cs" />
+    <Compile Include="Dtos\DonateRelatedItemRecordDto.cs" />
+    <Compile Include="Dtos\KnowledgeContentDto.cs" />
+    <Compile Include="Dtos\LightingCategoryDto.cs" />
+    <Compile Include="Dtos\LightingContentDto.cs" />
+    <Compile Include="Dtos\Other1Dto.cs" />
+    <Compile Include="Dtos\OtherAccessoriesDto.cs" />
+    <Compile Include="Dtos\PaymentMailingDto.cs" />
+    <Compile Include="Dtos\PaymentReturnDto.cs" />
+    <Compile Include="Dtos\PaymentReceiveDto.cs" />
+    <Compile Include="Dtos\PaymentDto.cs" />
+    <Compile Include="Dtos\PictureListDto.cs" />
+    <Compile Include="Dtos\ProductDto.cs" />
+    <Compile Include="Dtos\QA_Dto.cs" />
+    <Compile Include="Dtos\TermsDto.cs" />
+    <Compile Include="Dtos\ProductQnA.cs" />
+    <Compile Include="Dtos\PurchaseDto.cs" />
+    <Compile Include="Dtos\EditorDto.cs" />
+    <Compile Include="Dtos\CardUpdateDto.cs" />
+    <Compile Include="Dtos\PrivacyDto.cs" />
+    <Compile Include="Dtos\AboutMeDto.cs" />
+    <Compile Include="Dtos\MainCategoryInsertDto.cs" />
+    <Compile Include="Dtos\CategoryGetDto.cs" />
+    <Compile Include="Dtos\EditCategoryDto.cs" />
+    <Compile Include="Dtos\MemberDto.cs" />
+    <Compile Include="Dtos\FaqGetDto.cs" />
+    <Compile Include="Dtos\FaqInsertDto.cs" />
+    <Compile Include="Dtos\OrdersDto.cs" />
+    <Compile Include="Dtos\ProductAdminInsertDto.cs" />
+    <Compile Include="Dtos\SpecDto.cs" />
+    <Compile Include="Dtos\VideoCategoryDto.cs" />
+    <Compile Include="Dtos\VideoContentDto.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DapperHelper.cs" />
+    <Compile Include="Helpers\ImageFileHelper.cs" />
+    <Compile Include="Helpers\ImageFormatHelper.cs" />
+    <Compile Include="Helpers\Interface\IDapperHelper.cs" />
+    <Compile Include="Helpers\Interface\IImageFileHelper.cs" />
+    <Compile Include="Helpers\Interface\IImageFormatHelper.cs" />
+    <Compile Include="Helpers\Interface\IRepeatLimit.cs" />
+    <Compile Include="Helpers\RepeatLimit.cs" />
+    <Compile Include="Helpers\SystemFunctions.cs" />
+    <Compile Include="Helpers\Tools.cs" />
+    <Compile Include="Models\AddTbsva.cs" />
+    <Compile Include="Models\AuthParamV2.cs" />
+    <Compile Include="Models\Classification.cs" />
+    <Compile Include="Models\ClassificationModuleV2.cs" />
+    <Compile Include="Models\ConvertForms.cs" />
+    <Compile Include="Models\DonateStatus.cs" />
+    <Compile Include="Models\DonateType.cs" />
+    <Compile Include="Models\DonateAffiliatedArea.cs" />
+    <Compile Include="Models\IndexSlideshow.cs" />
+    <Compile Include="Models\KnowledgeContent2.cs" />
+    <Compile Include="Models\Lotus.cs" />
+    <Compile Include="Models\LotusImage.cs" />
+    <Compile Include="Models\GraphicsEditor.cs" />
+    <Compile Include="Models\GraphicsEditorImage.cs" />
+    <Compile Include="AdminModels\ManagerGroupInsertParam.cs" />
+    <Compile Include="AdminModels\ManagerGroupDeleteParam.cs" />
+    <Compile Include="AdminModels\ManagerGroupUpdateParam.cs" />
+    <Compile Include="AdminModels\ManagerGroupGetParam.cs" />
+    <Compile Include="AdminModels\ManagerGroupLnkParam.cs" />
+    <Compile Include="AdminModels\ManagerInsertParam.cs" />
+    <Compile Include="Models\ModuleV2.cs" />
+    <Compile Include="Models\TextEditor.cs" />
+    <Compile Include="Models\TaiwanDojoImage.cs" />
+    <Compile Include="Models\DirectorIntroduction.cs" />
+    <Compile Include="Models\DirectorIntroductionImage.cs" />
+    <Compile Include="Models\TaiwanDojo.cs" />
+    <Compile Include="Models\TimeMachine.cs" />
+    <Compile Include="Models\TaiwanDojoCategory.cs" />
+    <Compile Include="Models\Video2.cs" />
+    <Compile Include="Models\DonateRelatedItemImage.cs" />
+    <Compile Include="Models\VideoImage2.cs" />
+    <Compile Include="Models\VideoImage.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\ActivityImage.cs" />
+    <Compile Include="Models\ActivityCategory.cs" />
+    <Compile Include="Models\ArticleCategory.cs" />
+    <Compile Include="Models\ArticleContent.cs" />
+    <Compile Include="Models\ArticleImage.cs" />
+    <Compile Include="Models\Donate.cs" />
+    <Compile Include="Models\DonateBuyerType.cs" />
+    <Compile Include="Models\DonatePayStatus.cs" />
+    <Compile Include="Models\DonatePayType.cs" />
+    <Compile Include="Models\DonateRelatedItem.cs" />
+    <Compile Include="Models\DonateRelatedItemRecord.cs" />
+    <Compile Include="Models\KnowledgeContent.cs" />
+    <Compile Include="Models\KnowledgeImage.cs" />
+    <Compile Include="Models\LightingCategory.cs" />
+    <Compile Include="Models\LightingContent.cs" />
+    <Compile Include="Models\LightingImage.cs" />
+    <Compile Include="Models\Other1.cs" />
+    <Compile Include="Models\OtherAccessories.cs" />
+    <Compile Include="Models\PaymentMailing.cs" />
+    <Compile Include="Models\PictureList.cs" />
+    <Compile Include="Models\QA.cs" />
+    <Compile Include="Models\Terms.cs" />
+    <Compile Include="Models\VideoCategory.cs" />
+    <Compile Include="Models\VideoContent.cs" />
+    <Compile Include="Models\Wish.cs" />
+    <Compile Include="Models\Privacy.cs" />
+    <Compile Include="Models\AboutMe.cs" />
+    <Compile Include="Models\ApiResult.cs" />
+    <Compile Include="Models\BaseAuth.cs" />
+    <Compile Include="Models\AuthUser.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ContactUs.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\AuthAdmin.cs" />
+    <Compile Include="Models\ManagerGroup.cs" />
+    <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\Faq.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\NewsImage.cs" />
+    <Compile Include="Models\EnumSet.cs" />
+    <Compile Include="Models\Orders.cs" />
+    <Compile Include="Models\ProductSpec.cs" />
+    <Compile Include="Models\Sku.cs" />
+    <Compile Include="Models\SkuMarketing.cs" />
+    <Compile Include="Models\Spu.cs" />
+    <Compile Include="Models\SpuCategory.cs" />
+    <Compile Include="Models\SpuDetail.cs" />
+    <Compile Include="Models\SpuIntroductionImage.cs" />
+    <Compile Include="Models\SpuLogistics.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\SubCategory1.cs" />
+    <Compile Include="Models\SubCategory2.cs" />
+    <Compile Include="Profiles\AddTbsvaProfile.cs" />
+    <Compile Include="Profiles\ClassificationModuleV2Profile.cs" />
+    <Compile Include="Profiles\IndexSlideshowProfile.cs" />
+    <Compile Include="Profiles\KnowledgeContent2ListProfile.cs" />
+    <Compile Include="Profiles\LotusProfile.cs" />
+    <Compile Include="Profiles\GraphicsEditorProfile.cs" />
+    <Compile Include="Profiles\TextEditorProfile.cs" />
+    <Compile Include="Profiles\TaiwanDojoProfile.cs" />
+    <Compile Include="Profiles\TaiwanDojoCategoryProfile.cs" />
+    <Compile Include="Profiles\ActivityCategoryProfile.cs" />
+    <Compile Include="Profiles\DirectorIntroductionProfile.cs" />
+    <Compile Include="Profiles\TimeMachineProfile.cs" />
+    <Compile Include="Profiles\ConvertFormsProfile.cs" />
+    <Compile Include="Profiles\Video2Profile.cs" />
+    <Compile Include="Profiles\VideoProfile.cs" />
+    <Compile Include="Profiles\ActivityProfile.cs" />
+    <Compile Include="Profiles\ArticleCategoryListProfile.cs" />
+    <Compile Include="Profiles\ArticleContentListProfile.cs" />
+    <Compile Include="Profiles\CategoryAdminProfile.cs" />
+    <Compile Include="Profiles\DonateProfile.cs" />
+    <Compile Include="Profiles\FaqProfile.cs" />
+    <Compile Include="Profiles\KnowledgeContentListProfile.cs" />
+    <Compile Include="Profiles\LightingCategoryListProfile.cs" />
+    <Compile Include="Profiles\LightingContentListProfile.cs" />
+    <Compile Include="Profiles\NewsProfile.cs" />
+    <Compile Include="Profiles\OrdersAdminProfile.cs" />
+    <Compile Include="Profiles\Other1Profile.cs" />
+    <Compile Include="Profiles\OtherAccessoriesProfile.cs" />
+    <Compile Include="Profiles\PaymentMailingProfile.cs" />
+    <Compile Include="Profiles\PaymentProfile.cs" />
+    <Compile Include="Profiles\PictureListProfile.cs" />
+    <Compile Include="Profiles\ProductAdminProfile.cs" />
+    <Compile Include="Profiles\QAListProfile.cs" />
+    <Compile Include="Profiles\VideoCategoryProfile.cs" />
+    <Compile Include="Profiles\VideoContentProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ActivityCategoryService.cs" />
+    <Compile Include="Services\AuthAdminV2Service.cs" />
+    <Compile Include="Services\Interface\IAuthAdminV2Service.cs" />
+    <Compile Include="Services\Interface\ILotusService.cs" />
+    <Compile Include="Services\Interface\INewsService.cs" />
+    <Compile Include="Services\Interface\IGraphicsEditorService.cs" />
+    <Compile Include="Services\LotusService.cs" />
+    <Compile Include="Services\NewsService.cs" />
+    <Compile Include="Services\AddTbsvaService.cs" />
+    <Compile Include="Services\ConvertFormsService.cs" />
+    <Compile Include="Services\DirectorIntroductionService.cs" />
+    <Compile Include="Services\IndexSlideshowService.cs" />
+    <Compile Include="Services\Interface\IAddTbsvaService.cs" />
+    <Compile Include="Services\Interface\IConvertFormsService.cs" />
+    <Compile Include="Services\Interface\IDirectorIntroductionService.cs" />
+    <Compile Include="Services\Interface\IIndexSlideshowService.cs" />
+    <Compile Include="Services\Interface\IKnowledgeContent2Service.cs" />
+    <Compile Include="Services\Interface\ITextEditorService.cs" />
+    <Compile Include="Services\Interface\ITaiwanDojoCategoryService.cs" />
+    <Compile Include="Services\Interface\ITaiwanDojoService.cs" />
+    <Compile Include="Services\Interface\ITimeMachineService.cs" />
+    <Compile Include="Services\Interface\IVideo2Service.cs" />
+    <Compile Include="Services\KnowledgeContent2Service.cs" />
+    <Compile Include="Services\GraphicsEditorService.cs" />
+    <Compile Include="Services\TextEditorService.cs" />
+    <Compile Include="Services\TaiwanDojoCategoryService.cs" />
+    <Compile Include="Services\TaiwanDojoService.cs" />
+    <Compile Include="Services\TimeMachineService.cs" />
+    <Compile Include="Services\Video2Service.cs" />
+    <Compile Include="Services\VideoService.cs" />
+    <Compile Include="Services\ActivityService.cs" />
+    <Compile Include="Services\ArticleCategoryService.cs" />
+    <Compile Include="Services\ArticleContentService.cs" />
+    <Compile Include="Services\DonateRelatedItemService.cs" />
+    <Compile Include="Services\DonateService.cs" />
+    <Compile Include="Services\Interface\IActivityCategoryService.cs" />
+    <Compile Include="Services\Interface\IVideoService.cs" />
+    <Compile Include="Services\Interface\IActivityService.cs" />
+    <Compile Include="Services\Interface\IArticleCategoryService.cs" />
+    <Compile Include="Services\Interface\IArticleContentService.cs" />
+    <Compile Include="Services\Interface\IDonateRelatedItemService.cs" />
+    <Compile Include="Services\Interface\IDonateService.cs" />
+    <Compile Include="Services\Interface\IKnowledgeContentService.cs" />
+    <Compile Include="Services\Interface\ILightingCategoryService.cs" />
+    <Compile Include="Services\Interface\ILightingContentService.cs" />
+    <Compile Include="Services\Interface\IOther1Service.cs" />
+    <Compile Include="Services\Interface\IOtherAccessoriesService.cs" />
+    <Compile Include="Services\Interface\IPaymentDonateService.cs" />
+    <Compile Include="Services\Interface\IPaymentMailingService.cs" />
+    <Compile Include="Services\Interface\IPaymentService.cs" />
+    <Compile Include="Services\Interface\IPictureListService.cs" />
+    <Compile Include="Services\Interface\IQAService.cs" />
+    <Compile Include="Services\Interface\ITermsService.cs" />
+    <Compile Include="Services\Interface\IPrivacyService.cs" />
+    <Compile Include="Services\Interface\ISpecService.cs" />
+    <Compile Include="Services\Interface\IVideoCategoryService.cs" />
+    <Compile Include="Services\Interface\IVideoContentService.cs" />
+    <Compile Include="Services\KnowledgeContentService.cs" />
+    <Compile Include="Services\LightingCategoryService.cs" />
+    <Compile Include="Services\LightingContentService.cs" />
+    <Compile Include="Services\Other1Service.cs" />
+    <Compile Include="Services\OtherAccessoriesService.cs" />
+    <Compile Include="Services\PaymentDonateService.cs" />
+    <Compile Include="Services\PaymentMailingService.cs" />
+    <Compile Include="Services\PictureListService.cs" />
+    <Compile Include="Services\QAService.cs" />
+    <Compile Include="Services\TermsService.cs" />
+    <Compile Include="Services\PrivacyService.cs" />
+    <Compile Include="Services\AboutMeService.cs" />
+    <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\Interface\IAboutMeService.cs" />
+    <Compile Include="Services\Interface\ICategoryService.cs" />
+    <Compile Include="Services\Interface\IMemberService.cs" />
+    <Compile Include="Services\Interface\IFaqService.cs" />
+    <Compile Include="Services\Interface\IOrdersService.cs" />
+    <Compile Include="Services\Interface\IProductService.cs" />
+    <Compile Include="Services\MemberService.cs" />
+    <Compile Include="Services\FaqService.cs" />
+    <Compile Include="Services\OrdersService.cs" />
+    <Compile Include="Services\PaymentService.cs" />
+    <Compile Include="Services\SpecService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\VideoCategoryService.cs" />
+    <Compile Include="Services\VideoContentService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59415</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59415/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

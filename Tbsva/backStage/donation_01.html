@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真佛宗密教總會 | 後台管理</title>
+    <link rel="stylesheet" href="./css/Kits/quill.snow.css">
+    <link rel="icon" type="image/x-icon" href="./img/elements/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css">
+<!-- <link rel="stylesheet" href="./css/bootstrap_v4.4.1.min.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/Kits/atlantis.min.css">
+<link rel="stylesheet" href="./css/page.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="loadingScreens loadingScreenz">
+    <div class="loadings">
+        <div class="loading"></div>
+        <div class="texts">
+            <p>NOW LOADING ···</p>
+        </div>
+    </div>
+</div>
+        <div class="main-header">
+    <!-- Logo Header -->
+    <div class="logo-header" data-background-color="">
+        <a class="logo" href="./">
+            <div class="images">
+                <img src="./img/elements/logo.png" class="navbar-brand">
+            </div>
+        </a>
+        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fal fa-bars"></i>
+            </span>
+        </button>
+        <button class="topbar-toggler more"><i class="far fa-ellipsis-v"></i></button>
+        <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+                <i class="fal fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="">
+        <div class="container-fluid">
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                <li class="nav-item dropdown hidden-caret mr-2 nav-item-hover">
+                    <p class="dropdown-toggle mb-0" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-alt"></i>
+                        <span class="get_admin"></span>
+                    </p>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <p class="dropdown-item mb-0 dropdown-non">設定</p>
+                        <div class="dropdown-divider"></div>
+                        <p class="dropdown-item mb-0 btnOpenz" data-toggle="modal" data-target="#passWordEdit">修改密碼</p>
+                    </div>
+                </li>
+                <li class="nav-item hidden-caret nav-item-hover">
+                    <p class="mb-0 btnLogoutz"><i class="far fa-sign-out"></i> 登出</p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="sidebar sidebar-style-2">
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content menus">
+            <ul class="nav nav-primary">
+                <ul data-numz="editCategory" class="nav nav-primary categories editCategoryz"></ul>
+                <ul data-numz="financialCategory" class="nav nav-primary categories financialCategoryz"></ul>
+                <ul data-numz="managerCategory" class="nav nav-primary categories managerCategoryz"></ul>
+            </ul>
+        </div>
+    </div>
+</div>
+        <div class="main-panel">
+            <div data-type="02" data-category="financialCategory" data-numz="f02" class="aiders"></div>
+            <div class="content">
+                <div class="page-inner">
+                    <div class="page-header">
+                        <h4 class="page-title">結緣捐贈</h4>
+                        <span class="notes">（＊號為必填欄位）</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-12 form-group py-0 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <a class="btnReturn btnReturnz">
+                                                    <i class="fad fa-chevron-square-left"></i>
+                                                </a>
+                                                <h2 class="text-primary d-inline mb-0">新增結緣品</h2>
+                                            </div>
+                                            <div class="form-check p-0">
+                                                <label class="form-check-label mr-0">
+                                                    <input class="form-check-input topz" type="checkbox" value="0">
+                                                    <span class="form-check-sign">置頂</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row align-items-start justify-content-center">
+                                        <div class="col-sm-auto imageCols px-0">
+                                            <label>封面圖<span class="note">（圖片大小：800 X 640）</span><span class="markz"></span></label>
+                                            <div class="titleImages titleSamplez mt-0">
+                                                <!-- <div class="sampleImages">
+                                                    <img src="./img/elements/imageIcon.png">
+                                                </div> -->
+                                                <img src="./img/samples/sample800x640.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm px-0">
+                                            <div class="row mx-0">
+                                                <div class="form-group col-md-6">
+                                                    <label>自行上傳封面圖<span class="note">（圖片大小：800 X 640）</span><span class="markz"></span></label>
+                                                    <div class="d-flex align-items-end">
+                                                        <input type="file" class="form-control imgFilez titleImagez" accept="image/*">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>結緣品名稱<span class="markz"></span></label>
+                                                    <input type="text" class="form-control titlez" placeholder="標題內容（建議字數在 20 個字元內）">
+                                                </div>
+                                            </div>
+                                            <div class="row mx-0">
+                                                <div class="form-group col-md-6">
+                                                    <label>取得辦法<span class="markz"></span></label>
+                                                    <input type="text" class="form-control subTitlez" placeholder="取得辦法（建議字數在 100 個字元內）">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>品項金額<span class="notes">（單位：新台幣）</span><span class="markz"></span></label>
+                                                    <div class="fieldUnits units">
+                                                        <input type="text" class="form-control numberz amountz" placeholder="金額">
+                                                        <span>元</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label>介紹簡述<span class="notes">（只於勾選置頂時顯示於主分頁頂端）</span><span class="markz"></span></label>
+                                                <textarea type="text" class="form-control textareas halfs briefz" placeholder="簡述內容"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 px-0">
+                                            <div class="form-group">
+                                                <div id="editor" class="editorz"></div>
+                                                <input type="file" name="" id="editorImagez" hidden accept="image/*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-12 px-0">
+                                            <div class="form-group">
+                                                <div class="btns justify-content-end">
+                                                    <a href="#" class="btn btn-sm btn-danger btnResetz">
+                                                        <i class="fal fa-chalkboard"></i> 清空
+                                                    </a>
+                                                    <a href="#" class="btn btn-sm btn-success btnAddz">
+                                                        <i class="fal fa-save"></i> 儲存
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            © 中國真佛宗密教總會 All Rights Reserved.
+        </nav>
+        <div class="copyright ml-auto">
+            2021, made with by <a href="https://www.payware.com.tw/">派維爾金流支付</a>
+        </div>
+    </div>
+</footer>
+        </div>
+    </div>
+    <!-- 忘記密碼 -->
+    <!-- Modal -->
+<div class="modal fade" id="passWordEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">修改密碼<span class="notes">（＊號為必填欄位）</span></h3>
+                <button type="button" class="close"><span>&times;</span></button>
+                <input type="hidden" class="closez" data-dismiss="modal" aria-label="Close" aria-hidden="true">
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>舊密碼<span class="markz">（包含大小寫英數字，至少要4碼）</span></label>
+                    <input type="password" class="editInput form-control oldPswz">
+                </div>
+                <div class="form-group">
+                    <label>新密碼<span class="markz">（包含大小寫英數字，至少要4碼）</span></label>
+                    <input type="password" class="editInput form-control newPswz">
+                </div>
+                <div class="form-group">
+                    <label>確認新密碼<span class="markz">（包含大小寫英數字，至少要4碼）</span></label>
+                    <input type="password" class="editInput form-control cfmPswz">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btns justify-content-end">
+                    <button type="button" class="btn btnFirst btnChangePswz">修改</button>
+                    <button type="button" class="btn btnCancel btnCancelz">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- <script src="./js/jquery.3.2.1.min.js"></script> -->
+    <!-- <script src="./js/popper.min.js"></script> -->
+    <!-- <script src="./js/bootstrap_v4.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./js/Kits/bootstrap-fileinput.js"></script>
+    <script src="./js/Kits/jquery-ui.min.js"></script>
+    <script src="./js/Kits/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="./js/Kits/jquery.scrollbar.min.js"></script>
+    <script src="./js/Kits/atlantis.min.js"></script>
+
+    <script src="./js/selfs/dateFormat.js"></script>
+    <script src="./js/selfs/commons.js"></script>
+
+    <script src="./js/Kits/quill.js"></script>
+    <script>
+        var toolbarOptions = [
+            [{ header: [1, 2, 3, 4, 5, false] }],
+            ['bold', 'italic', 'underline'],
+            [{ color: [] }, { background: [] }],
+            ['link', 'blockquote', 'code-block', 'image'],
+            [{ list: 'ordered' }, { list: 'bullet' }, { 'align': [] }]
+        ];
+
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            placeholder: '內容..',
+            theme: 'snow'
+        });
+    </script>
+    <script src="./js/selfs/menu.js"></script>
+    <script src="./js/features/donationAdd.js"></script>
+</body>
+
+</html>

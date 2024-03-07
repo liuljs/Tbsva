@@ -1,0 +1,9 @@
+ActivityCategoryController
+
+https://dotblogs.com.tw/wellwind/2016/02/25/web-api-customize-response-5
+
+https://dotblogs.azurewebsites.net/Leo_CodeSpace/2017/07/03/173458
+
+https://fullstackladder.dev/blog/2015/10/20/web-api-unify-response-message/
+
+https://docs.microsoft.com/zh-tw/aspnet/web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
